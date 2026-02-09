@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--  Vault -->
+  <WorldObjectDef ParentName="OutpostBase">
+    <defName>Scorpio_Outpost_Vault</defName>
+    <label>vault</label>
+    <description>Places a temporary, autonomously-led camp that serves as a vault for storing treasure.</description>
+    <worldObjectClass>VOE.Outpost_Encampment</worldObjectClass>
+    <expandingIconTexture>WorldObjects/SO_Vault</expandingIconTexture>
+    <modExtensions>
+      <li Class="Outposts.OutpostExtension">
+        <ProvidedFood>MealFine</ProvidedFood>
+        <TicksPerProduction>-1</TicksPerProduction>
+        <TicksToPack>25000</TicksToPack>
+      </li>
+    </modExtensions>
+  </WorldObjectDef>
+
+  <!-- Hard Drugs -->
+
+  <WorldObjectDef ParentName="OutpostBase">
+    <defName>Scorpio_Outpost_ChemLab</defName>
+    <label>chem lab</label>
+    <description>Places a temporary, autonomously-led factory that specializes in refining hard drugs. Once an ample amount is produced, a delivery will be made at the outskirts of a faction's primary colony.</description>
+    <worldObjectClass>VOEFactoryAddon.Outpost_Factory</worldObjectClass>
+    <expandingIconTexture>WorldObjects/SO_Drug</expandingIconTexture>
+    <modExtensions>
+      <li Class="VOEFactoryAddon.OutpostExtension_Factory">
+        <factoryType>Drugs</factoryType>
+        <targetMarketValuePerPawn>250</targetMarketValuePerPawn>
+        <RequiredSkills>
+          <Crafting>10</Crafting>
+        </RequiredSkills>
+        <ChooseLabel>Choose output</ChooseLabel>
+        <ChooseDesc>Choose what drugs must be produced</ChooseDesc>
+      </li>
+    </modExtensions>
+  </WorldObjectDef>
+
+  <!-- Medieval Weapons -->
+
+  <WorldObjectDef ParentName="OutpostBase">
+    <defName>Scorpio_Outpost_Ironworks</defName>
+    <label>forge</label>
+    <description>Places a temporary, autonomously-led factory that specializes in forging melee weaponry. Once an ample amount is produced, a delivery will be made at the outskirts of a faction's primary colony.</description>
+    <worldObjectClass>VOEFactoryAddon.Outpost_Factory</worldObjectClass>
+    <expandingIconTexture>WorldObjects/SO_Forge</expandingIconTexture>
+    <modExtensions>
+      <li Class="VOEFactoryAddon.OutpostExtension_Factory">
+        <factoryType>Melee</factoryType>
+        <allowedTechLevels>
+          <li>Medieval</li>
+          <li>Industrial</li>
+        </allowedTechLevels>
+        <targetMarketValuePerPawn>400</targetMarketValuePerPawn>
+        <RequiredSkills>
+          <Crafting>5</Crafting>
+        </RequiredSkills>
+        <ChooseLabel>Choose output</ChooseLabel>
+        <ChooseDesc>Choose what weapons must be produced</ChooseDesc>
+      </li>
+    </modExtensions>
+  </WorldObjectDef>
+
+  <!--  Firearms -->
+
+  <WorldObjectDef ParentName="OutpostBase">
+    <defName>Scorpio_Outpost_MilitaryComplex</defName>
+    <label>military factory</label>
+    <description>Places a temporary, autonomously-led factory that specializes in assembling firearms and munitions. Once an ample amount is produced, a delivery will be made at the outskirts of a faction's primary colony.</description>
+    <worldObjectClass>VOEFactoryAddon.Outpost_Factory</worldObjectClass>
+    <expandingIconTexture>WorldObjects/SO_Military</expandingIconTexture>
+    <modExtensions>
+      <li Class="VOEFactoryAddon.OutpostExtension_Factory">
+        <factoryType>Ranged</factoryType>
+        <allowedTechLevels>
+          <li>Industrial</li>
+        </allowedTechLevels>
+        <targetMarketValuePerPawn>600</targetMarketValuePerPawn>
+        <RequiredSkills>
+          <Crafting>10</Crafting>
+        </RequiredSkills>
+        <ChooseLabel>Choose output</ChooseLabel>
+        <ChooseDesc>Choose what weapons must be produced</ChooseDesc>
+      </li>
+    </modExtensions>
+  </WorldObjectDef>
+
+  <!-- Textiles -->
+
+  <WorldObjectDef ParentName="OutpostBase">
+    <defName>Scorpio_Outpost_TextileMill</defName>
+    <label>textile mill</label>
+    <description>Places a temporary, autonomously-led factory that specializes in weaving fabric. Once an ample amount is produced, a delivery will be made at the outskirts of a faction's primary colony.</description>
+    <worldObjectClass>VOEFactoryAddon.Outpost_Factory</worldObjectClass>
+    <expandingIconTexture>WorldObjects/SO_Textile</expandingIconTexture>
+    <modExtensions>
+      <li Class="VOEFactoryAddon.OutpostExtension_Factory">
+        <factoryType>Textiles</factoryType>
+        <targetMarketValuePerPawn>350</targetMarketValuePerPawn>
+        <RequiredSkills>
+          <Crafting>10</Crafting>
+        </RequiredSkills>
+        <ChooseLabel>Choose output</ChooseLabel>
+        <ChooseDesc>Choose which fabric type must be produced</ChooseDesc>
+      </li>
+    </modExtensions>
+  </WorldObjectDef>
+
+  <!--  Prosthetic Lab -->
+
+  <WorldObjectDef ParentName="OutpostBase">
+    <defName>Scorpio_Outpost_ProstheticLab</defName>
+    <label>prosthetic lab</label>
+    <description>Places a temporary, autonomously-led factory that specializes in fabricating medical prosthetics. Once an ample amount is produced, a delivery will be made at the outskirts of a faction's primary colony.</description>
+    <worldObjectClass>VOEFactoryAddon.Outpost_Factory</worldObjectClass>
+    <expandingIconTexture>WorldObjects/SO_Prosthetic</expandingIconTexture>
+    <modExtensions>
+      <li Class="VOEFactoryAddon.OutpostExtension_Factory">
+        <factoryType>Prosthetics</factoryType>
+        <targetMarketValuePerPawn>500</targetMarketValuePerPawn>
+        <RequiredSkills>
+          <Medicine>10</Medicine>
+        </RequiredSkills>
+        <ChooseLabel>Choose output</ChooseLabel>
+        <ChooseDesc>Choose what prosthetics must be produced</ChooseDesc>
+      </li>
+    </modExtensions>
+  </WorldObjectDef>
+
+  <!-- Recycling -->
+
+  <WorldObjectDef ParentName="OutpostBase">
+    <defName>Scorpio_Outpost_Recycling</defName>
+    <label>recycling center</label>
+    <description>Places a temporary, autonomously-led recycling center that processes waste materials into useful resources.</description>
+    <worldObjectClass>VOEFactoryAddon.Outpost_Recycler</worldObjectClass>
+    <expandingIconTexture>WorldObjects/OS_Recycling</expandingIconTexture>
+    <modExtensions>
+      <li Class="Outposts.OutpostExtension">
+        <TicksPerProduction>60000</TicksPerProduction>
+        <MinPawns>1</MinPawns>
+        <RequiredSkills>
+          <Crafting>5</Crafting>
+        </RequiredSkills>
+      </li>
+    </modExtensions>
+  </WorldObjectDef>
+
+</Defs>
