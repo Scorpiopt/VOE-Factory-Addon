@@ -64,14 +64,7 @@ namespace VOEFactoryAddon
                 item.Destroy();
             }
 
-            List<Thing> mergedResources = new List<Thing>();
-            foreach (var group in resourcesToReturn.GroupBy(t => t.def))
-            {
-                int total = group.Sum(t => t.stackCount);
-                mergedResources.AddRange(group.Key.Make(total));
-            }
-
-            if (mergedResources.Count > 0) Deliver(mergedResources);
+            if (resourcesToReturn.Count > 0) Deliver(resourcesToReturn);
         }
 
         public override string ProductionString() =>
