@@ -123,7 +123,34 @@ namespace VOEFactoryAddon
                 }
             }
             techLevelSources.Add(thingDef.techLevel);
+            var defNameTechLevel = GetTechLevelFromDefName(thingDef.defName);
+            if (defNameTechLevel != TechLevel.Undefined)
+            {
+                techLevelSources.Add(defNameTechLevel);
+            }
             return techLevelSources.MaxBy(x => (int)x);
+        }
+
+        private static TechLevel GetTechLevelFromDefName(string defName)
+        {
+            string defNameLower = defName.ToLowerInvariant();
+            if (defNameLower.Contains("tribal"))
+            {
+                return TechLevel.Neolithic;
+            }
+            foreach (TechLevel techLevel in Enum.GetValues(typeof(TechLevel)))
+            {
+                if (techLevel == TechLevel.Undefined)
+                {
+                    continue;
+                }
+                string techLevelName = techLevel.ToString().ToLowerInvariant();
+                if (defNameLower.Contains(techLevelName))
+                {
+                    return techLevel;
+                }
+            }
+            return TechLevel.Undefined;
         }
     }
 }
