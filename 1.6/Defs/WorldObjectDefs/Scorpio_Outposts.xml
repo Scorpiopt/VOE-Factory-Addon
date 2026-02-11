@@ -29,6 +29,10 @@
       <li Class="VOEFactoryAddon.OutpostExtension_Factory">
         <factoryType>Drugs</factoryType>
         <targetMarketValuePerPawn>250</targetMarketValuePerPawn>
+        <allowedTechLevels>
+          <li>Medieval</li>
+          <li>Industrial</li>
+        </allowedTechLevels>
         <RequiredSkills>
           <Crafting>10</Crafting>
         </RequiredSkills>
@@ -99,6 +103,9 @@
       <li Class="VOEFactoryAddon.OutpostExtension_Factory">
         <factoryType>Textiles</factoryType>
         <targetMarketValuePerPawn>350</targetMarketValuePerPawn>
+        <allowedTechLevels>
+          <li>Industrial</li>
+        </allowedTechLevels>
         <RequiredSkills>
           <Crafting>10</Crafting>
         </RequiredSkills>
@@ -123,6 +130,9 @@
         <RequiredSkills>
           <Medicine>10</Medicine>
         </RequiredSkills>
+        <allowedTechLevels>
+          <li>Industrial</li>
+        </allowedTechLevels>
         <ChooseLabel>Choose output</ChooseLabel>
         <ChooseDesc>Choose what prosthetics must be produced</ChooseDesc>
       </li>
