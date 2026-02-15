@@ -104,6 +104,10 @@
         <factoryType>Textiles</factoryType>
         <targetMarketValuePerPawn>350</targetMarketValuePerPawn>
         <allowedTechLevels>
+          <li>Undefined</li>
+          <li>Animal</li>
+          <li>Neolithic</li>
+          <li>Medieval</li>
           <li>Industrial</li>
         </allowedTechLevels>
         <RequiredSkills>
